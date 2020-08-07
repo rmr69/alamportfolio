@@ -1,0 +1,50 @@
+/*********************** 
+Template Name: Rodja  - Personal crate Agency thml Template
+Template URL: https://www.vecuro.com/html/rodja;
+Author Name: Rabiul;
+Author URL : https://www.shahinator.com;
+Description: Rodja - Personal create Agency HTML Template;
+Version:1.01;
+
+Table of content
+ 
+ ************************/
+ /* *****************************
+
+ ******************************** */
+ /* *****************************
+1. Overall typhography
+2. Aside section
+ ******************************** */
+  /* *****************************
+1. Overall typhography
+ ******************************** */
+/* Reset Code */
+* {
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+}
+a:hover {
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+}
+
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+}
+
+ /* *****************************
+2. Aside section
+ ******************************** */
+.main-container .aside {
+  width: 270px;
+  background-color: red;
+}
