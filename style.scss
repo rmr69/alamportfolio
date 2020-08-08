@@ -25,7 +25,7 @@ Table of content
 1. Overall typhography
  ******************************** */
 
- $primary-color:#ff0049;
+ $primary-color:#ec1839;
  $transition: all .3s ease-in-out;
  $body-font: 'Open Sans', sans-serif;
  $title-font:'Poppins', sans-serif;
@@ -101,6 +101,13 @@ Table of content
     padding-right: 15px;
 }
 
+.mt-30{
+    margin-top:30px;
+}
+.mb-30{
+    margin-bottom:30px;
+}
+
  /* *****************************
 2. Aside & Home Section
  ******************************** */
@@ -131,8 +138,8 @@ Table of content
                     content: '';
                     height: 20px;
                     width: 20px;
-                    border-top: 4px solid #ec1839;
-                    border-left: 4px solid #ec1839;
+                    border-top: 4px solid $primary-color;
+                    border-left: 4px solid $primary-color;
                     position: absolute;
                     top: 0;
                     left: 0;
@@ -142,8 +149,8 @@ Table of content
                     content: '';
                     height: 20px;
                     width: 20px;
-                    border-right: 4px solid #ec1839;
-                    border-bottom: 4px solid #ec1839;
+                    border-right: 4px solid $primary-color;
+                    border-bottom: 4px solid $primary-color;
                     position: absolute;
                     bottom: 0;
                     right: 0;
@@ -176,11 +183,11 @@ Table of content
                          -moz-transition: $transition;
                          text-transform: capitalize;
                          &.active{
-                            color: #ec1839;
+                            color: $primary-color;
                          }
                          &:not(.active):hover{
                              padding-left:5px;
-                             color: #ec1839;
+                             color: $primary-color;
                          }
                          i{
                             margin-right: 5px;
@@ -212,7 +219,7 @@ Table of content
                 height: 2px;
                 width: 18px;
                 display: inline-block;
-                background-color:#ec1839 ;
+                background-color:$primary-color ;
                 position: relative;
                 &::before{
                     content: '';
@@ -221,7 +228,7 @@ Table of content
                     position: absolute;
                     top: -6px;
                     left: 0;
-                    background-color:#ec1839 ;
+                    background-color: $primary-color ;
                 }
                 &::after{
                     content: '';
@@ -230,7 +237,7 @@ Table of content
                     position: absolute;
                     top: 6px;
                     left: 0;
-                    background-color:#ec1839 ;
+                    background-color:$primary-color ;
                 }
             }
          }
@@ -291,7 +298,7 @@ Table of content
                         a{
                             height: 35px;
                             width: 35px;
-                            background-color:#ec1839;
+                            background-color: $primary-color;
                             display: inline-block;
                             text-align: center;
                             line-height: 35px;
@@ -325,6 +332,7 @@ Table of content
              font-family: 'Rubik', sans-serif;
              font-weight: 700;
              position: relative;
+             margin-bottom: 30px;
              &::before{
                 content:'';
                 height: 4px;
@@ -332,7 +340,7 @@ Table of content
                 position: absolute;
                 top: 100%;
                 left: 0; 
-                background-color: #ec1839;
+                background-color: $primary-color;
              }
              &::after{
                 content:'';
@@ -342,8 +350,133 @@ Table of content
                 top: 100%;
                 left: 0; 
                 margin-top: 8px;
-                background-color: #ec1839;
+                background-color: $primary-color;
              }
          }
      }
+     .about-content{
+         -ms-flex: 0 0 100%;
+         flex: 0 0 100%;
+         max-width: 100%;
+         .about-text{
+
+        -ms-flex: 0 0 100%;
+         flex: 0 0 100%;
+         max-width: 100%;
+             h3{
+                font-size: 24px;
+                margin-bottom: 15px;
+                font-weight: 700;
+                color: #302e4d;
+                span{
+                    color: $primary-color;
+                }
+             }
+             p{
+                font-size: 16px;
+                line-height: 25px;
+                color: #504e70;
+                margin: 0px;
+             }
+         }
+
+         .personal-info{
+            // background-color: red;
+            -ms-flex: 0 0 60%;
+            flex: 0 0 60%;
+            max-width: 60%;
+             .info-item{
+
+                -ms-flex: 0 0 50%;
+                flex: 0 0 50%;
+                max-width: 50%;
+
+                 p{
+                     font-weight: 600;
+                     font-size: 16px;
+                     color: #302e4d;
+                     border-bottom: 1px solid #e8dfec;
+                     margin: 0px;
+                     padding:10px 0;
+                    
+                     span{
+                        font-weight: 400;
+                        color: #504e70;
+                        margin-left: 4px;
+                        display: inline-block;
+
+                     }
+                 }
+             }
+
+             .buttons{
+                 
+                 a{
+                     &.btn{
+                        background-color: $primary-color;
+                        font-family: 'Rubik', sans-serif;
+                        font-weight: 500;
+                        padding: 12px 35px;
+                        color: #fff;
+                        border-radius: 40px;
+                        -webkit-transition: $transition;
+                        transition: $transition;
+                        display: inline-block;
+                        white-space: nowrap;
+                        margin-right: 15px;
+                        margin-top:10px;
+                        &:hover{
+                            -webkit-transform: scale(1.05);
+                            transform: scale(1.05);
+                        }
+                     }
+                 }
+             }
+         }
+
+         .skills{
+            -ms-flex: 0 0 40%;
+            flex: 0 0 40%;
+            max-width: 40%;
+            .skill-item{
+              
+                -ms-flex: 0 0 100%;
+                flex: 0 0 100%;
+                max-width: 100%;
+                h5{
+                  line-height: 40px;
+                  font-weight: 600;
+                  font-size:16px;
+                  color: #302e4d;
+                  text-transform: capitalize;
+                  margin: 0px;
+                }
+                .progressbar{
+                    background-color: #e3e3e3;
+                    height: 8px;
+                    border-radius: 4px;
+                    // overflow: hidden;
+                    width: 100%;
+                    position: relative;
+                    .progress-in{
+                        position: absolute;
+                        left:0;
+                        top:0;
+                        height: 100%;
+                        background-color: $primary-color;
+                        border-radius: 4px;
+                    }
+                    .skill-percent{
+                       line-height: 40px;
+                       position: absolute;
+                       color: #302e4d;
+                       right: 0;
+                       top:-40px;
+                       font-weight: 400;
+                    }
+                }
+            }
+         }
+     }
+     
  }
