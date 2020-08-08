@@ -28,12 +28,21 @@ Table of content
  $transition: all .3s ease-in-out;
  $body-font: 'Open Sans', sans-serif;
  $title-font:'Poppins', sans-serif;
+
+ @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
  
  /* Reset Code */
  *{
      margin: 0px;
      padding: 0px;
      list-style: none;
+     outline: none;
+     box-sizing: border-box;
+
+ }
+
+ ::before,::after{
+    box-sizing: border-box;
  }
  
  a{
@@ -52,8 +61,13 @@ Table of content
  }
  
   body{
-
+    margin: 0;
+    line-height: 1.5;
+    font-size: 16px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
   }
+ 
 
  /* *****************************
 2. Aside section
@@ -61,6 +75,41 @@ Table of content
  .main-container{
      .aside{
          width: 270px;
-         background-color: red;
+         background-color: #fdf9ff;
+         position: fixed;
+         height: 100%;
+         left: 0;
+         top: 0;
+         z-index: 10;
+         border-right:1px solid #e8dfec;
+         padding: 30px;
+         .logo{
+             background-color: #ededed;
+             padding: 30px 0;
+             a{
+
+             }
+         }
+
+         nav{
+             ul.nav{
+                 li{
+                     a{
+                         i{
+
+                         }
+                     }
+                 }
+             }
+         }
+     }
+     .main-content{
+        padding-left: 270px;
+        .section{
+            background-color: #f2f2fc;
+            min-height: 100vh;
+            display: block;
+            
+        }
      }
  }

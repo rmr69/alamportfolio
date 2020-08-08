@@ -19,11 +19,18 @@ Table of content
   /* *****************************
 1. Overall typhography
  ******************************** */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
 /* Reset Code */
 * {
   margin: 0px;
   padding: 0px;
   list-style: none;
+  outline: none;
+  box-sizing: border-box;
+}
+
+::before, ::after {
+  box-sizing: border-box;
 }
 
 a {
@@ -41,10 +48,37 @@ ol {
   padding: 0;
 }
 
+body {
+  margin: 0;
+  line-height: 1.5;
+  font-size: 16px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+}
+
  /* *****************************
 2. Aside section
  ******************************** */
 .main-container .aside {
   width: 270px;
-  background-color: red;
+  background-color: #fdf9ff;
+  position: fixed;
+  height: 100%;
+  left: 0;
+  top: 0;
+  z-index: 10;
+  border-right: 1px solid #e8dfec;
+  padding: 30px;
+}
+.main-container .aside .logo {
+  background-color: #ededed;
+  padding: 30px 0;
+}
+.main-container .main-content {
+  padding-left: 270px;
+}
+.main-container .main-content .section {
+  background-color: #f2f2fc;
+  min-height: 100vh;
+  display: block;
 }
