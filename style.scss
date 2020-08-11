@@ -19,6 +19,7 @@ Table of content
 1. Overall typhography
 2. Aside & Home Section
 3. About Section
+4. About Section
  ******************************** */
 
   /* *****************************
@@ -103,7 +104,7 @@ Table of content
     font-weight: 700;
     position: relative;
     margin-bottom: 30px;
-    
+
 }
 
 .section-title h2::before{
@@ -572,3 +573,68 @@ h3.title{
      }
      
  }
+
+/* *****************************
+4. Services Section
+ ******************************** */
+.service{
+    .service-item{
+        padding: 15px;
+        -ms-flex: 0 0 33.33%;
+        flex: 0 0 33.33%;
+        max-width: 33.33%;
+        display: -ms-flexbox;
+        display: flex;
+        .service-item-inner{
+            background-color: #fdf9ff;
+            border:1px solid #d4d4e3;
+            border-radius: 10px;
+            padding: 30px 15px;
+            text-align: center;
+            -webkit-transition: $transition;
+            transition: $transition;
+            &:hover{
+                -webkit-box-shadow: 0 0 20px rgba(48,46,77,0.15);
+                box-shadow: 0 0 20px rgba(48,46,77,0.15);
+                .icon{
+                   background-color: $primary-color; 
+                   i{
+                       font-size:24px;
+                       color:#fff;
+                   }
+                }
+            }
+            .icon{
+                height:60px;
+                width: 60px;
+                // background-color: red;
+                display: block;
+                margin: 0 auto 30px;
+                text-align: center;
+                border-radius: 50%;
+                -webkit-transition: $transition;
+                transition: $transition;
+                i{
+                    font-size: 40px;
+                    line-height: 60px;
+                    color: $primary-color;
+                    -webkit-transition: $transition;
+                    transition: $transition;
+                }
+            }
+            h4{
+                font-size: 18px;
+                margin-bottom: 15px;
+                color: #302e4d;
+                font-weight: 700;
+                text-transform: capitalize;
+            }
+            p{
+                font-size: 16px;
+                color: #504e70;
+                line-height: 25px;
+                margin: 0;
+            }
+        }
+    }
+}
