@@ -21,6 +21,7 @@ Table of content
 3. About Section
 4. About Section
 5. Portfolio Section
+6. Blog Section
  ******************************** */
 
   /* *****************************
@@ -799,6 +800,89 @@ h3.title{
      }
  }
 
+
+
+
+ /* *****************************
+6. Blog Section
+ ******************************** */
+.blog{
+    .container{
+        padding-bottom: 40px;
+    }
+    .blog-item{
+        flex: 0 0 33.33%;
+        max-width: 33.33%;
+        margin-bottom: 30px;
+        .blog-item-inner{
+            border-radius: 10px;
+            overflow: hidden;
+            border: 1px solid #d4d4e3;
+            &:hover .blog-img img{
+                -webkit-transform: scale(1.1);
+                transform: scale(1.1);
+            }
+            .blog-img{
+                position: relative;
+                overflow: hidden;
+                img{
+                    width: 100%;
+                    display: block;
+                    -webkit-transition: all 0.5s ease-in-out;
+                    transition: all 0.5s ease-in-out;
+                }
+
+                .blog-date{
+                    position: absolute;
+                    background-color: $primary-color;
+                    padding: 4px 10px;
+                    border-radius: 5px;
+                    color: #fff;
+                    font-weight: 600;
+                    font-size:14px;
+                    left:15px ;
+                    bottom: 15px;
+
+
+                }
+            }
+            .blog-info{
+                padding: 30px 15px;
+                background-color:#fdf9ff ;
+                .blog-title{
+                    font-size: 18px;
+                    font-weight: 700;
+                    color: #302e4d;
+                    text-transform: capitalize;
+                    margin-bottom: 10px;
+                }
+                .blog-description{
+                        font-size: 16px;
+                        line-height: 25px;
+                        color: #504e70;
+                        font-weight: 400;
+                        margin-bottom: 15px;
+                }
+
+                .blog-tags{
+                    font-size: 16px;
+                    line-height: 25px;
+                    color: #504e70;
+                    font-weight: 400;
+                    font-size: 14px;
+                    text-transform: capitalize;
+                    a{
+                       text-decoration: none;
+                       font-weight: 600; 
+                       color: $primary-color;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
 /*================== Lightbox section ============== */
 .lightbox.open{
     display:-ms-flexbox;
@@ -884,8 +968,7 @@ h3.title{
             color:#ffffff;
             font-weight:400;
             z-index: -1;
-            .caption-text{}
-            .caption-counter{}
+
         }
 
         .lightbox-close{
