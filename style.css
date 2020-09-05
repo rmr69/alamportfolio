@@ -584,6 +584,39 @@ h3.title {
 /* *****************************
 5. Portfolio Section
  ******************************** */
+.hide {
+  display: none;
+}
+
+.show {
+  display: block;
+  animation: showItem 0.5s ease-in-out;
+}
+
+@-webkit-keyframes showItem {
+  0% {
+    -webkit-transform: scale(0.8);
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+@keyframes showItem {
+  0% {
+    -webkit-transform: scale(0.8);
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    opacity: 1;
+  }
+}
 .portfolio .portfolio-filter {
   -ms-flex: 0 0 100%;
   flex: 0 0 100%;
@@ -684,6 +717,38 @@ h3.title {
 }
 
 /*================== Lightbox section ============== */
+.lightbox.open {
+  display: -ms-flexbox;
+  display: flex;
+}
+.lightbox.open .lightbox-contnet {
+  /*  -webkit-transform: scale(1);
+   transform: scale(1); */
+  animation: lightboxImage .5s ease;
+}
+
+@-webkit-keyframes lightboxImage {
+  0% {
+    -webkit-transform: scale(0.8);
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+@keyframes lightboxImage {
+  0% {
+    -webkit-transform: scale(0.8);
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
 .lightbox {
   position: fixed;
   left: 0;
@@ -692,8 +757,9 @@ h3.title {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.6);
   z-index: 100;
-  display: -ms-flexbox;
-  display: flex;
+  display: none;
+  /* display:-ms-flexbox;
+  display:flex; */
   -ms-flex-align: center;
   align-items: center;
   -ms-flex-pack: center;
@@ -703,17 +769,23 @@ h3.title {
 }
 .lightbox .lightbox-contnet {
   position: relative;
+  /* -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  -webkit-transform: scale(0.8);
+  transform: scale(0.8); */
 }
 .lightbox .lightbox-contnet img.lightbox-img {
   height: auto;
   width: auto;
   max-width: 100%;
-  max-height: 430px;
+  max-height: 500px;
   cursor: pointer;
+  display: block;
+  padding: 40px 0 30px;
 }
 .lightbox .lightbox-contnet .lightbox-caption {
   position: absolute;
-  bottom: -20px;
+  bottom: 0px;
   left: 0;
   width: 100%;
   background-color: rgba(0, 0, 0, 0.5);
@@ -724,12 +796,13 @@ h3.title {
   font-size: 16px;
   color: #ffffff;
   font-weight: 400;
+  z-index: -1;
 }
 .lightbox .lightbox-contnet .lightbox-close {
   position: absolute;
   height: 40px;
   width: 40px;
-  top: -40px;
+  top: 0px;
   right: 0px;
   font-size: 32px;
   text-align: right;
@@ -737,18 +810,7 @@ h3.title {
   color: #fff;
 }
 .lightbox .lightox-controls .prev-item {
-  height: 40px;
-  width: 40px;
-  background-color: #fff;
-  text-align: center;
-  border-radius: 50%;
-  cursor: pointer;
-}
-.lightbox .lightox-controls .prev-item i {
-  font-size: 32px;
-  color: #ec1839;
-}
-.lightbox .lightox-controls .next-item {
+  position: absolute;
   height: 40px;
   width: 40px;
   background-color: #fff;
@@ -757,6 +819,46 @@ h3.title {
   cursor: pointer;
   top: 50%;
   margin-top: -20px;
+  left: 30px;
+  z-index: 110;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+.lightbox .lightox-controls .prev-item:active {
+  -webkit-transform: scale(1);
+  transform: scale(1);
+}
+.lightbox .lightox-controls .prev-item:hover {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+.lightbox .lightox-controls .prev-item i {
+  font-size: 32px;
+  color: #ec1839;
+  line-height: 40px;
+}
+.lightbox .lightox-controls .next-item {
+  position: absolute;
+  height: 40px;
+  width: 40px;
+  background-color: #fff;
+  text-align: center;
+  border-radius: 50%;
+  cursor: pointer;
+  top: 50%;
+  margin-top: -20px;
+  right: 30px;
+  z-index: 110;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+.lightbox .lightox-controls .next-item:hover {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+.lightbox .lightox-controls .next-item:active {
+  -webkit-transform: scale(1);
+  transform: scale(1);
 }
 .lightbox .lightox-controls .next-item i {
   font-size: 32px;
