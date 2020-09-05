@@ -699,6 +699,7 @@ h3.title {
   -ms-flex-pack: center;
   justify-content: center;
   cursor: zoom-out;
+  padding: 30px;
 }
 .lightbox .lightbox-contnet {
   position: relative;
@@ -728,13 +729,39 @@ h3.title {
   position: absolute;
   height: 40px;
   width: 40px;
-  background-color: red;
   top: -40px;
   right: 0px;
-  font-size: 16px;
-}
-.lightbox .lightbox-contnet .lightbox-close i {
+  font-size: 32px;
+  text-align: right;
+  line-height: 40px;
   color: #fff;
+}
+.lightbox .lightox-controls .prev-item {
+  height: 40px;
+  width: 40px;
+  background-color: #fff;
+  text-align: center;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.lightbox .lightox-controls .prev-item i {
+  font-size: 32px;
+  color: #ec1839;
+}
+.lightbox .lightox-controls .next-item {
+  height: 40px;
+  width: 40px;
+  background-color: #fff;
+  text-align: center;
+  border-radius: 50%;
+  cursor: pointer;
+  top: 50%;
+  margin-top: -20px;
+}
+.lightbox .lightox-controls .next-item i {
+  font-size: 32px;
+  color: #ec1839;
+  line-height: 40px;
 }
 
 /*================== Lightbox section ============== */
