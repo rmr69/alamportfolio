@@ -19,6 +19,7 @@ Table of content
 4. About Section
 5. Portfolio Section
 6. Blog Section
+7. Contact Section
  ******************************** */
   /* *****************************
 1. Overall typhography
@@ -59,6 +60,10 @@ body {
   font-size: 16px;
   font-family: 'Montserrat', sans-serif;
   font-weight: 400;
+}
+
+input, textarea, select {
+  font-family: 'Montserrat', sans-serif;
 }
 
 .section {
@@ -342,6 +347,29 @@ h3.title {
   /* *****************************
 3. About Section
  ******************************** */
+.btn {
+  background-color: #ec1839;
+  font-family: 'Rubik', sans-serif;
+  font-weight: 500;
+  padding: 12px 35px;
+  color: #fff;
+  border-radius: 40px;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  display: inline-block;
+  white-space: nowrap;
+  margin-right: 15px;
+  margin-top: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+.btn:hover {
+  -webkit-transform: scale(1.05);
+  transform: scale(1.05);
+  color: #fff;
+}
+
 .about .about-content {
   -ms-flex: 0 0 100%;
   flex: 0 0 100%;
@@ -724,6 +752,7 @@ h3.title {
   padding-bottom: 40px;
 }
 .blog .blog-item {
+  -ms-flex: 0 0 33.33%;
   flex: 0 0 33.33%;
   max-width: 33.33%;
   margin-bottom: 30px;
@@ -788,6 +817,78 @@ h3.title {
   text-decoration: none;
   font-weight: 600;
   color: #ec1839;
+}
+
+/* *****************************
+7. Contact Section
+ ******************************** */
+.contact .contact-info-item {
+  -ms-flex: 0 0 33.33%;
+  flex: 0 0 33.33%;
+  max-width: 33.33%;
+  text-align: center;
+  margin-bottom: 40px;
+}
+.contact .contact-info-item .icon {
+  display: inline-block;
+}
+.contact .contact-info-item .icon i {
+  font-size: 40px;
+  color: #ec1839;
+}
+.contact .contact-info-item .icon h4 {
+  font-size: 18px;
+  font-weight: 700;
+  color: #302e4d;
+  text-transform: capitalize;
+  margin: 15px 0 5px;
+}
+.contact .contact-info-item .icon p {
+  font-size: 16px;
+  line-height: 25px;
+  color: #504e70;
+  margin: 0;
+  font-weight: 400;
+}
+.contact .contact-form {
+  -ms-flex: 0 0 100%;
+  flex: 0 0 100%;
+  max-width: 100%;
+}
+.contact .contact-form .form-item {
+  margin-bottom: 30px;
+}
+.contact .contact-form .form-item .form-control {
+  width: 100%;
+  height: 50px;
+  border-radius: 25px;
+  border: 1px solid #d4d4e3;
+  padding: 10px 25px;
+  font-size: 16px;
+  color: #504e70;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+.contact .contact-form .form-item .form-control:focus {
+  -webkit-box-shadow: 0 0 20px rgba(48, 46, 77, 0.15);
+  box-shadow: 0 0 20px rgba(48, 46, 77, 0.15);
+}
+.contact .contact-form .form-item textarea.form-control {
+  height: 140px;
+}
+.contact .contact-form .form-item .btn {
+  height: 50px;
+  padding: 0 50px;
+}
+.contact .contact-form .col-6 {
+  -ms-flex: 0 0 50%;
+  flex: 0 0 50%;
+  max-width: 50%;
+}
+.contact .contact-form .col-12 {
+  -ms-flex: 0 0 100%;
+  flex: 0 0 100%;
+  max-width: 0 0 100%;
 }
 
 /*================== Lightbox section ============== */
@@ -941,3 +1042,98 @@ h3.title {
 }
 
 /*================== Lightbox section ============== */
+/* ============ Responsive Start Here ===============*/
+@media (max-width: 1199px) {
+  .about .about-content .personal-info .info-item p span {
+    display: block;
+    margin-left: 0;
+  }
+
+  .main-container .main-content .section {
+    padding: 0 70px;
+  }
+
+  .padd-15 {
+    padding-right: 25px;
+  }
+}
+@media (max-width: 991px) {
+  .service .service-item {
+    -ms-flex: 0 0 50%;
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+
+  .blog .blog-item {
+    -ms-flex: 50%;
+    flex: 50%;
+    max-width: 50%;
+  }
+}
+@media (max-width: 767px) {
+  .contact .contact-form .col-6 {
+    -ms-flex: 100%;
+    flex: 100%;
+    max-width: 100%;
+  }
+
+  .blog .blog-item {
+    -ms-flex: 100%;
+    flex: 100%;
+    max-width: 100%;
+  }
+
+  .portfolio .portfolio-item {
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .about .about-content .personal-info {
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .about .about-content .skills {
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .about .about-content .education {
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .about .about-content .experience {
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .service .service-item {
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .portfolio .portfolio-filter button {
+    margin-bottom: 8px;
+  }
+}
+@media (max-width: 575px) {
+  .contact .contact-info-item {
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .portfolio .portfolio-item {
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+/* ============ Responsive End Here    =============*/
