@@ -9,11 +9,13 @@
     <link rel="stylesheet" href="style.css">
 
 <!-- live style Switcher -->
-<link rel="stylesheet" href="css/switcher/pink.css">
-<link rel="stylesheet" href="css/switcher/blue.css">
-<link rel="stylesheet" href="css/switcher/orange.css">
-<link rel="stylesheet" href="css/switcher/yellow.css">
-<link rel="stylesheet" href="css/switcher/green.css">
+<link rel="stylesheet" class="alternate-style" title="pink" href="css/switcher/pink.css" disabled>
+<link rel="stylesheet" class="alternate-style" title="blue" href="css/switcher/blue.css" disabled>
+<link rel="stylesheet" class="alternate-style" title="orange"  href="css/switcher/orange.css" disabled>
+<link rel="stylesheet" class="alternate-style" title="yellow" href="css/switcher/yellow.css" disabled>
+<link rel="stylesheet" class="alternate-style" title="green" href="css/switcher/green.css" disabled>
+
+<link rel="stylesheet" href="css/switcher/styleswitcher.css" type="text/css">
 
 </head>
 <body>
@@ -597,11 +599,40 @@
         <div class="next-item" onclick="nextItem()"><i class="fa fa-angle-right"></i></div>
     </div>
 </div>
-
 <!-- Lightnox End -->
+
+<!-- Live style switcher - Demo Only -->
+
+<div class="style-switcher">
+    <div class="toggle-style-switcher">
+        <i class="fa fa-cog fa-spin"></i>
+    </div>
+    <h5>Style Swicher</h5>
+    <ul>
+        <li><a href="javascript:void(0);" title="pink" style="background-color: #ec1839;" onclick="setActiveStyle('pink')"></a></li>
+        <li><a href="javascript:void(0);" title="blue" style="background-color: #2196f3;" onclick="setActiveStyle('blue')"></a></li>
+        <li><a href="javascript:void(0);" title="orange" style="background-color: #fa5b0f;" onclick="setActiveStyle('orange')"></a></li>
+        <li><a href="javascript:void(0);" title="yellow" style="background-color: #ffb400;" onclick="setActiveStyle('yellow')"></a></li>
+        <li><a href="javascript:void(0);" title="green" style="background-color: #72b626;" onclick="setActiveStyle('green')"></a></li>
+    </ul>
+    <h5>Body Skin</h5>
+    <label for="">
+        <input type="radio" class="body-skin" name="body-style" value="light" checked="true">
+        Light
+    </label>
+    <label for="">
+        <input type="radio" class="body-skin" name="body-style" value="dark">
+        Dark
+    </label>
+</div>
+
+<!-- Live style switcher - Demo Only -->
+
+
     <script src="js/jquery-3.5.1.slim.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/popper.min.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/styleswitcher.js"></script>
 </body>
 </html>
