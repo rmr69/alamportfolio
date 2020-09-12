@@ -1137,3 +1137,20 @@ h3.title {
   }
 }
 /* ============ Responsive End Here    =============*/
+
+body.dark .main-container .aside nav ul li a.active{
+  color: #504e70;
+}
+body.dark .main-container .aside nav ul li a.hover{
+  color: #504e70;
+}
+
+body.dark .portfolio .portfolio-filter button.active   {
+  color: #504e70;
+}
+
+body.dark .portfolio .portfolio-filter button.active   {
+  border-color: #504e70;
+}
+
+
